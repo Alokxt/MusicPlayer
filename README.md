@@ -1,5 +1,5 @@
 # MusicPlayer
-Full Stack music Player using js (frontend) and python(backend) 
+Full Stack music Player using js (frontend) and python(backend).
 Till now,it has a home page that contains songs from db(From admins side), a playlist creation/view page and User authentication system.
 Started with simple django models creation ,then connected models with foreinkey and created view logics for template rendering.
 It uses django forms for playlist creation,and song addition in playlist.
