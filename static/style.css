@@ -1,0 +1,182 @@
+/*body{
+    /*background-color: black;
+    color: white; 
+} */
+*{
+    margin: 0;
+    padding: 0;
+}
+.left{
+    width: 25vw;
+    padding: 10px;
+    height: 80vw;
+}
+.right{
+    width: 75vw;
+    max-height: 100vw;
+    
+}
+
+
+
+.home ul li{
+    display: flex;
+    width: 15px;
+    gap: 15px;
+    padding-top: 10px;
+    
+
+}
+.library ul li{
+    display: flex;
+    width: 15px;
+    gap: 15px;
+    padding-top: 10px;
+    
+
+}
+
+
+.secs{
+    display: flex;
+    align-items: centre;
+    background-color: rgb(43, 42, 42);
+    padding: 5px;
+    gap: 5px;
+}
+
+.secs2{
+    display: flex;
+    width: 100px;
+    padding-top: 1px;
+    gap: 5px;
+
+}
+
+.btn{
+    background-attachment: fixed;
+    background-color: antiquewhite;
+    color: black;
+}
+
+.links{
+    align-items: flex-end;
+    margin: 5px;
+    bottom: 0;
+    position: relative;
+    
+
+}
+
+.header{
+    justify-content: space-between;
+    justify-items: center;
+    display: flex;
+    background-color: rgb(36, 33, 33);
+    height: 3vw;
+
+}
+
+.header *{
+    padding: 4px;
+}
+
+.spotifyplaylist{
+    padding: 16px;
+}
+
+.cardcontainer{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px;
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.card{
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: rgb(69, 62, 62);
+}
+
+.card > *{
+    padding-top: 10px;
+
+}
+.card img{
+    width: 150px;
+    object-fit: contain;
+}
+
+.playbar{
+    position: relative;
+    bottom: 0;
+    width: 80%;
+    background-color: rgb(182, 248, 182);
+    padding: 12px;
+}
+
+.songbuttons{
+    display: flex;
+    justify-items: centre;
+    gap: 12px;
+}
+
+.buttons2{
+    border-radius: 10px;
+    justify-content: left;
+
+}
+.audiofun{
+    display: flex;
+    width: 240px;
+    align-items: centre;
+    justify-items: left;
+    margin-top: 5px;
+}
+
+.songlist ul li{
+    display: flex;
+    list-style-type: decimal;
+    gap: 10px;
+    cursor: pointer;
+    
+    
+}
+
+.name{
+    display: flex;
+    padding-bottom: 2px;
+}
+
+.art{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.playlistscontainer{
+    display: flex;
+    gap: 26px;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+.playlistlist{
+    align-items: flex-start;
+
+}
+
+.songscontainer{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.controlaudio{
+    background-color: black;
+}

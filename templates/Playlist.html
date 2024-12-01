@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\static\style2.css">
+    <title>Playlist</title>
+</head>
+<body>
+    <div class="formcontainer">
+        <div class="playlistcreationform">
+            <h2>create Playlist</h2>
+            <form method = "POST">
+                {% csrf_token %}
+                {{create.as_p}}
+                <button type="submit">save</button>
+            </form>
+        </div>
+
+        <div class="addsongsinplaylist">
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{add.as_p}}
+                <button type = "submit">save</button>
+            </form>
+        </div>
+    </div>
+    <h2> Your Playlist</h2>
+    <div class="playlistscontainer" id = "playlistcontainer">
+        
+        {% if list %}
+
+            {% for s in list %}
+            <div class="playlistlist">
+                <h3><a href="{% url 'get-playlist' s.id %}">{{s.name}}</a></h3>
+                <button onclick="getcontent('songcontent-{{ forloop.counter }}')">View</button>
+                <div class="songlist" id="songcontent-{{ forloop.counter }}" style ="display:none">
+                    <ul>
+                        <li>
+                            <div class="songscontainer">
+                                <img class = "invert" src="/static/logos/music.svg/" atl="">
+                                <div class ="info">
+                                    <div class="name" id="songname">songname</div>
+                                    <div class="art" id = "artistname">Artist</div>
+                                </div>
+                                <button  class = "songplaybutton" type="button" id="song-id"> <img class ="invert" src="/static/logos/playbutton.svg/" alt=""></button>
+                                <button  class = "songpausebutton" type="button" id="song-id"> <img class ="invert" src="/static/logos/pause.svg/" alt=""></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    <script src="/static/script2.js/">
+    </script>
+    
+</body>
+</html>

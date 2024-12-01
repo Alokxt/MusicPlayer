@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="\static\style.css">
+    <link rel="stylesheet" href="\static\utility.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class="container flex bg-black">
+        <div class="left border ">
+
+            <div class="home bg-grey m2 p-1">
+                <ul>
+                    <li> <img class= "invert rounded" src = "\static\logos\logo.svg" alt="spotify">Meusclet</li>
+                    <li> <img class= "invert" src = "\static\logos\home.svg" alt="home">Home</li>
+                    <li> <img class= "invert" src = "\static\logos\search.svg" alt="home">search</li>
+                </ul>
+            </div>
+            <div class="library rounded bg-grey p-1">
+                <ul>
+                    <li> <img class = " invert" src ="\static\logos\library.svg" alt="Library"> Library</li>
+                </ul>
+                <div class="heading">
+                    <img src="" alt="">
+                </div>
+
+            
+            <div class=" library ">
+                <button id = "createlist"><a href = "{% url 'playlist' %}">Create playlist</a></button>
+            </div>
+            
+            <div id="playlist-form-container" style="display: none;">
+                <form id="playlist-form">
+                    
+                </form>
+                <div id = "playlist-container">
+                    <ul>
+                        {% for playlist in playlists %}
+                            <li>{{ playlist.name }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class=" library ">
+                <button>Add Songs</button>
+            </div>
+            <div class = "addsong" id="addplay">
+                <form>
+                    {% csrf_token %}
+                    {{add.as_p}}
+                </form>
+            </div>
+
+
+            <div class="secs">
+                <section class="library" data-encore-id="text">It’s easy, we’ll help you</span>
+                </div>
+                <div class="secs2"><button data-encore-id="buttonPrimary" class="rounded"><span class="btn">Create playlist</span></button></div></section>
+                <section class="CfruGiDGW_FH4l65GMpb NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB wQnUXn1m6Gy4PH8jhslb D8wJ9TPfJzLeLJYxnad2 oE8LAmRhbeQqsZrQo4lb zWWLnqWslTLHwq3wBgGB XNjgtSbyhshr7YQcVvry mhuhir0ikRqXAPHU8ZZ1">
+                    <div class="fIgbQ9qpINdyy__tkaHi"><span class="" data-encore-id="text">We’ll keep you updated on new episodes</span></div>
+                    <div class="wv308QWnPnkI8n0GdqYO"><a draggable="false" data-encore-id="buttonPrimary" class="" href="/genre/podcasts-web">
+                        <span class="">Browse podcasts</span></a></div></section>
+                        <div><ul role="list" tabindex="0" aria-label="Your Library"><div class="JUa6JJNj7R_Y3i4P8YUX" role="presentation" style="height: 0px; --row-height: 64px;"><div data-testid="top-sentinel" class="lyVkg68L7ycnwyOcO3vj" role="presentation" style="height: 0px;"><li role="listitem" class="eC25_w41L83mXDCqdm_A" style="height: calc(100% + 0px);"></li><div role="presentation" style="height: 0px;"></div></div><div role="presentation" style="transform: translateY(0px);"></div><div data-testid="bottom-sentinel" class="qnYVzttodnzg9WdrVQ1p" role="presentation" style="height: calc(100% + 0px);"><div role="presentation" style="height: 0px;"></div><li role="listitem" class="eC25_w41L83mXDCqdm_A" style="height: calc(100% + 0px);"></li></div></div></ul></div></div>
+                   <div class="library  links" data-testid="left-sidebar-footer"><div class="links" data-testid="left-sidebar-legal-links"><div class=""><div class="Link__Container-sc-c30omp-1 hzoAVA"><a href="https://www.spotify.com/in-en/legal/" id="" class="" data-encore-id="textLink"><span data-encore-id="type" class="links">Legal</span></a></div><div class="links"><a href="https://www.spotify.com/in-en/safetyandprivacy/" id="" class="Link-sc-k8gsk-0 eHpyHD Link__BottomLink-sc-c30omp-0 kmeDa" data-encore-id="textLink"><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 gBYjgG">Safety &amp; Privacy Center</span></a></div><div class="Link__Container-sc-c30omp-1 hzoAVA"><a href="https://www.spotify.com/in-en/legal/privacy-policy/" id="" class="Link-sc-k8gsk-0 eHpyHD Link__BottomLink-sc-c30omp-0 kmeDa" data-encore-id="textLink"><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 gBYjgG">Privacy Policy</span></a></div><div class="Link__Container-sc-c30omp-1 hzoAVA"><a href="https://www.spotify.com/in-en/legal/cookies-policy/" id="" class="Link-sc-k8gsk-0 eHpyHD Link__BottomLink-sc-c30omp-0 kmeDa" data-encore-id="textLink"><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 gBYjgG">Cookies</span></a></div><div class="Link__Container-sc-c30omp-1 hzoAVA"><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" id="" class="Link-sc-k8gsk-0 eHpyHD Link__BottomLink-sc-c30omp-0 kmeDa" data-encore-id="textLink"><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 gBYjgG">About Ads</span></a></div><div class="Link__Container-sc-c30omp-1 hzoAVA"><a href="https://www.spotify.com/in-en/accessibility/" id="" class="Link-sc-k8gsk-0 eHpyHD Link__BottomLink-sc-c30omp-0 kmeDa" data-encore-id="textLink"><span data-encore-id="type" class="Type__TypeElement-sc-goli3j-0 gBYjgG">Accessibility</span></a></div></div><a draggable="false" href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener" class="WycFx_Gl2tUXbUJpZiD8"><span class="encore-text encore-text-marginal" data-encore-id="text">Cookies</span></a></div><div class="KsnGjjEeMb2miriJrkjW"><button data-testid="language-selection-button" class="Button-sc-y0gtbx-0 hsaUyI encore-text-body-small-bold" data-encore-id="buttonSecondary"><span aria-hidden="true" class="IconWrapper__Wrapper-sc-ihacte-0 ctWzzM"><svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI"><path d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h3.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h3.031z"></path></svg></span>English</button></div></div>
+                
+        </div>
+    
+        
+        <div class="right border ">
+            <div class="header bg-grey">
+                <div class=" nav"></div>
+                
+                {% if user.is_active %}
+                    <h4>{{user.username}}</h4>
+                {% else %}
+                    <div class="buttons">
+                        <button>
+                            <a href = "{% url 'signup' %}" >signup</a></button>
+                        <button><a href="{% url 'login' %}">Login</a></button>
+                    </div>
+
+               
+                {% endif %}
+                    
+                
+            </div>
+            <div class="spotifyplaylist">
+                <h3>Your Spotify Playlist</h3>
+                <div class="cardcontainer">
+                    
+                    
+                    
+                    <!--{% for s  in songs %}
+                    <div class="card">
+                        <img src="{{s.poster.url}}"  alt="">
+                        <audio id = "audio-player" style = " backgroundColor:grey; height : 20px; width: 150px;padding-top:5px;" controls>
+                            <source src="{{s.song.url}}" type ="audio/mpeg">
+                        </audio>
+                        <h2>{{s.songname}}</h2>
+
+                        <p>{{s.Artist}}</p>
+                        
+                    </div>
+
+                        
+                    {% endfor %} -->
+
+
+                </div>
+
+                <div class="playbar">
+                    <div class="songinfo"></div>
+                    <div class="songbuttons">
+                        <img src="\static\logos\previous.svg" alt="">
+                        <img src="\static\logos\playbutton.svg" alt="">
+                        <img src="\static\logos\next.svg" alt="">
+                    </div>
+                    <div class="songtime"></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="\static\script.js"></script>
+    
+</body>
+</html>
