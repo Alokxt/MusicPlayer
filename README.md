@@ -5,4 +5,4 @@ Started with simple django models creation ,then connected models with foreinkey
 It uses django forms for playlist creation,and song addition in playlist.
 For some places, i've used djangos template rendering for html page.
 And for others i've used the Json context to collect API's from the backend and used them with js at frontend.
-My Next commit in this repo  will be a Searching feature.
+Added a live Song Search suggestions feature using AJAX js
