@@ -5,8 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
 </head>
+
 <body>
    
     <div class="container flex bg-black">
@@ -72,8 +74,14 @@
         
         <div class="right border ">
             <div class="header bg-grey">
+                
                 <div class=" nav"></div>
                 
+                <div id="user_search" class="search-container" >
+                    <input type="text" id="search-input" autocomplete="off"  placeholder="Search a user..." class="search-input" >
+                        <ul id="search_suggestions"></ul>
+                </div>
+        
                 {% if user.is_active %}
                     <h4>{{user.username}}</h4>
                 {% else %}

@@ -111,4 +111,40 @@ async function main(){
 main()
 
 
+const x = document.getElementById("search-input")
+x.addEventListener('input',()=>{
+    const query = x.value
+    const suggestion = document.getElementById("search_suggestions")
+    if(query.length>0){
+        fetch(`/seach-song/api/?q=${query}`)
+        .then(response=> response.json())
+        .then(data =>{
+            console.log(data.result)
+            suggestion.innerHTML = ``
+            data.result.forEach(e =>{
+            let l = document.getElementById(e.id);
+            if(l){
+                l.parentNode.removeChild(l)
+            }
+            else{
+                l = document.createElement('li')
+                l.setAttribute('id',e.id);
+                l.innerHTML = `<p>${e.name} ~${e.artist}`
+                l.classList.add('search_suggestions')
 
+            }
+            suggestion.append(l)
+           })
+
+        })
+        .catch(error => console.log('error fetching',error));
+
+
+    }
+    else{
+         suggestion.innerHTML = ``
+
+    }
+    
+
+})

@@ -7,4 +7,5 @@ urlpatterns = [
     path('play/',views.play,name="player"),
     path('api/song/',views.getsongs,name="get_song"),
     path('signup/',views.signup,name="signup"),
+    path('seach-song/api/',views.search_songs,name="search_songs"),
     ]

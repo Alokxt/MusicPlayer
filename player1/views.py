@@ -128,4 +128,19 @@ def songview(request,song_id):
 
 
             
+def search_songs(request):
+    query = request.GET.get('q','')
+    print(query)
+    songs = []
+    if(query):
+        songs = Songs.objects.filter(songname__icontains = query)
+    l = []
+    for p in songs:
+        d={
+            'name':p.songname,
+            'artist':p.Artist,
+            'id':p.id,
+        }
+        l.append(d)
+    return JsonResponse({'result':l})
 
